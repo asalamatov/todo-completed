@@ -12,7 +12,7 @@ cd ~/Desktop
 ```
 cd desktop
 ```
-#### 4. In terminal
+## 4. In terminal
 ```
 npx create-expo-app todo-mobile
 ```
