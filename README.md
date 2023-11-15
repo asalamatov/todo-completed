@@ -3,16 +3,16 @@
 ## 1. [Install Node.JS - link](https://nodejs.org/en/download)
 ## 2. Open VS Code
 ## 3. Open Desktop/ folder
-### Open terminal: on Keyboard: ```Ctrl  Shift  ~```
-### On Mac/Linux
+#### Open terminal: on Keyboard: ```Ctrl  Shift  ~```
+#### On Mac/Linux
 ```
 cd ~/Desktop
 ```
-### On Windows
+#### On Windows
 ```
 cd desktop
 ```
-## 4. In terminal
+#### 4. In terminal
 ```
 npx create-expo-app todo-mobile
 ```
