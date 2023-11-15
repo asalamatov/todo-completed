@@ -3,7 +3,7 @@
 ## 1. [Install Node.JS - link](https://nodejs.org/en/download)
 ## 2. Open VS Code
 ## 3. Open Desktop/ folder
-#### Open terminal: on Keyboard: ```Ctrl  Shift  ~```
+#### Open terminal: on Keyboard: ```Ctrl  Shift  ~``` or From the menu, use the Terminal > New Terminal or View > Terminal menu commands.
 #### On Mac/Linux
 ```
 cd ~/Desktop
