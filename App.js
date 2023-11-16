@@ -12,6 +12,7 @@ import {
 const App = () => {
     const [task, setTask] = useState("");
     const [tasks, setTasks] = useState([]);
+    const [edit, setEdit] = useState(false);
 
     const handleAddTask = () => {
         if (task) {
@@ -20,9 +21,34 @@ const App = () => {
         }
     };
 
+    const handleDeleteTask = (index) => {
+        let newTasks = [...tasks];
+        newTasks.splice(index, 1); // Remove 1 element from the array at the specified index splice(index, howmany, item1, ....., itemX)
+        setTasks(newTasks);
+    }
+
+    const handleEditTask = (index) => {
+        setEdit(true);
+        setTask(tasks[index]);
+        handleDeleteTask(index);
+    }
+
     const renderItem = ({item, index}) => (
         <View style={styles.task}>
             <Text style={styles.itemList}>{item}</Text>
+            <View
+                style={styles.taskButtons}>
+                <TouchableOpacity
+                    onPress={() => handleEditTask(index)}>
+                    <Text
+                        style={styles.editButton}>Edit</Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => handleDeleteTask(index)}>
+                    <Text
+                        style={styles.deleteButton}>Delete</Text>
+                </TouchableOpacity>
+            </View>
         </View>
     );
 
@@ -40,7 +66,7 @@ const App = () => {
                 style={styles.addButton}
                 onPress={handleAddTask}>
                 <Text style={styles.addButtonText}>
-                    {"Add Task"}
+                    Add Task
                 </Text>
             </TouchableOpacity>
             <FlatList
